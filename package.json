@@ -1,0 +1,21 @@
+{
+  "name": "site-warning-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "현장 위치 기반 기상특보 발효 여부 판정 데모 (Next.js, Netlify 배포용)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

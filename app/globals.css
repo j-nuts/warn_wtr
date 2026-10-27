@@ -1,0 +1,24 @@
+:root { --bg:#f6f7f9; --card:#fff; --text:#1b1f24; --sub:#5d6772; --line:#dde1e6; --red:#c62828; --amber:#b26a00; --green:#1b7a3d; --blue:#1f5fbf; }
+@media (prefers-color-scheme: dark) { :root { --bg:#14171a; --card:#1d2125; --text:#e8eaed; --sub:#9aa4ae; --line:#2f353b; --red:#ff6b6b; --amber:#ffb454; --green:#5fd68a; --blue:#7fb0ff; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,"Malgun Gothic",sans-serif; }
+main { max-width:640px; margin:0 auto; padding:16px; }
+h1 { font-size:20px; margin:8px 0 14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; margin-bottom:12px; }
+form { display:flex; gap:8px; }
+input[type=text] { flex:1; min-width:0; padding:12px; font-size:16px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--text); }
+button { padding:12px 14px; font-size:15px; border:0; border-radius:8px; background:var(--blue); color:#fff; cursor:pointer; }
+button.ghost { background:transparent; color:var(--blue); border:1px solid var(--line); }
+button:disabled { opacity:.5; cursor:default; }
+.row { display:flex; gap:8px; margin-top:8px; }
+.cands { list-style:none; margin:10px 0 0; padding:0; }
+.cands li button { width:100%; text-align:left; background:var(--bg); color:var(--text); border:1px solid var(--line); margin-top:6px; }
+.cands small { display:block; color:var(--sub); }
+.verdict { font-size:22px; font-weight:700; margin:0 0 4px; }
+.v-in_effect { color:var(--red); } .v-upcoming { color:var(--amber); } .v-none { color:var(--green); } .v-err { color:var(--sub); }
+.sub { color:var(--sub); font-size:14px; margin:2px 0; }
+.items { list-style:none; margin:10px 0 0; padding:0; }
+.items li { border-top:1px solid var(--line); padding:10px 0; }
+.tag { display:inline-block; padding:1px 8px; border-radius:99px; font-size:13px; font-weight:600; margin-right:6px; border:1px solid currentColor; }
+.t-in_effect { color:var(--red); } .t-upcoming { color:var(--amber); } .t-pre { color:var(--blue); }
+.note { color:var(--sub); font-size:13px; margin-top:10px; }
