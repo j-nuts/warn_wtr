@@ -1,9 +1,0 @@
-
-> site-warning-demo@0.1.0 start
-> next start -p 3123
-
-▲ Next.js 16.4.3
-- Local:         http://localhost:3123
-- Network:       http://192.168.7.26:3123
-✓ Ready in 331ms
-✓ Running next.config.mjs took 49ms
