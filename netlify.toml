@@ -1,9 +1,11 @@
-# Netlify 배포 설정 — Next.js는 Netlify가 자동 감지(OpenNext 어댑터)하므로 별도 플러그인 설정이 필요 없습니다.
+# Netlify 배포 설정 — publish 디렉터리는 지정하지 않습니다(Next.js 런타임 플러그인이 결정).
 # 환경변수(KMA_SERVICE_KEY, KAKAO_REST_API_KEY)는 Netlify 대시보드
 #   Site configuration → Environment variables 에서 등록하세요. (이 저장소에 키를 넣지 마세요)
 [build]
   command = "npm run build"
-  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
