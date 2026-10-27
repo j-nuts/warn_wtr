@@ -6,7 +6,8 @@ export const dynamic = 'force-dynamic';
 
 // GET /api/warnings?lat=&lon=   (좌표 → 카카오로 행정구역 변환 후 판정)
 // 통보문은 정시 단위로 갱신되므로 CDN에 짧게 캐시해 공공데이터 호출 한도를 아낀다.
-const CACHE = { 'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=60' };
+// Netlify CDN은 기본적으로 쿼리스트링을 무시하므로 Netlify-Vary 로 쿼리(lat, lon)별 캐시를 강제한다.
+const CACHE = { 'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=60', 'Netlify-Vary': 'query' };
 
 export async function GET(request) {
   const sp = new URL(request.url).searchParams;
