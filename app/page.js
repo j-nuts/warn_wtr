@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import WorkAdvisor from './WorkAdvisor.js';
 
 const stamp = (s) => {
   const m = /^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(String(s || ''));
@@ -190,6 +191,8 @@ export default function Page() {
           {busy ? <p className="sub">{busy}</p> : <Result w={view.w} place={view.place} />}
         </section>
       )}
+
+      {!busy && view && <WorkAdvisor w={view.w} />}
     </main>
   );
 }
